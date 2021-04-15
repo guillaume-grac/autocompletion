@@ -11,9 +11,9 @@ catch (PDOException $e)
     die("Erreur : " . $e -> getMessage());
 }
 
-if (isset($_GET['moto']))
+if (isset($_GET['modele']))
 {
-    $idBike = htmlspecialchars(trim($_GET['moto']));
+    $idBike = htmlspecialchars(trim($_GET['modele']));
 
     $query = $pdo -> prepare("SELECT * FROM moto WHERE id = :id");
     $query -> execute([
@@ -49,7 +49,7 @@ if (isset($_GET['moto']))
         <form action="" method="get">
             <div class="input-group">
                 <input class="search-bar form-control form-control-lg" id="search" name="search" placeholder="What motorcycle are you looking for ?">
-                <div class="Matchlist"></div>
+                <div id="matchList"></div>
             </div>
         </form>
     </nav>
@@ -90,7 +90,7 @@ if (isset($_GET['moto']))
 </footer>
 
 <!--- Script --->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/jquery-3.6.0.js"></script>
 <script src="js/script.js"></script>
 
 </body>
