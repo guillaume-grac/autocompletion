@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    color: black;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* ----- Header ----- */
+
+/* ----- Main Content ----- */
+
+.container{
+    margin-top: 8%;
+}
+
+.search-bar{
+    border-radius: 10px;
+}
+
+main h1{
+    color: white;
+    text-shadow: black 3px 3px 3px;
+}
+
+/* ----- Footer -----*/
+
+footer{
+    padding-top: 1%;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 425px){
+
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1365px){
+
+}
+
+@media screen and (min-width: 1365px) and (max-width: 1568px){
+
+}
