@@ -14,7 +14,7 @@ catch (PDOException $e)
 
 $term = htmlspecialchars(trim($_GET['search']));
 
-$query = $pdo -> prepare("SELECT * FROM moto WHERE modele LIKE :term");
+$query = $pdo -> prepare("SELECT * FROM moto WHERE modele LIKE :term LIMIT 5" );
 $query -> execute([
     "term" => '%' . $term . '%'
 ]);
@@ -22,8 +22,8 @@ $query -> execute([
 $i = 0;
 $tab = array();
 
-while( $result = $query -> fetch(PDO::FETCH_ASSOC)){
-
+while( $result = $query -> fetch(PDO::FETCH_ASSOC))
+{
     $tab[$i][] = $result;
     $i++;
 }

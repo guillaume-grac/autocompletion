@@ -21,9 +21,12 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between">
         <a class="navbar-brand" href="index.php"><i class="fas fa-motorcycle"></i> Motor's Search</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="mute" onchange="document.getElementById('myVideo').muted = !document.getElementById('myVideo').muted">
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+                <label class="custom-control-label" for="customSwitch1"><i class="fas fa-volume-up"></i></label>
+            </div>
+        </div>
     </nav>
 </header>
 
@@ -35,7 +38,7 @@
                 <h1 class="text-center mt-5"><i class="fas fa-motorcycle"></i> Motor's Search</h1>
                 <div class="form-group">
                     <form action="result.php" method="get">
-                        <div class="input-group">
+                        <div>
                             <input class="search-bar form-control form-control-lg" id="search" name="search" placeholder="What motorcycle are you looking for ?">
                             <div id="matchList"></div>
                         </div>

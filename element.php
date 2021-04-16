@@ -1,4 +1,5 @@
 <?php
+
 try
 {
     $pdo = new PDO('mysql:host=localhost; dbname=autocompletion; charset=utf8', 'root', '', [
@@ -22,6 +23,7 @@ if (isset($_GET['modele']))
     $result = $query -> fetchAll(PDO::FETCH_ASSOC);
     $count = $query -> rowCount();
 }
+
 ?>
 
 <!doctype html>
@@ -34,26 +36,24 @@ if (isset($_GET['modele']))
     <title>autocompletion</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/element.css">
 </head>
 
 <body>
 
 <!--- Header --->
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between">
-        <a class="navbar-brand" href="index.php"><i class="fas fa-motorcycle"></i> Motor's Search</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <form action="" method="get">
-            <div class="input-group">
-                <input class="search-bar form-control form-control-lg" id="search" name="search" placeholder="What motorcycle are you looking for ?">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+        <a class="navbar-brand" href="index.php" title="Retour à l'accueil"><i class="fas fa-motorcycle"></i> Motor's Search</a>
+        <form class="mr-5" action="" method="get">
+            <div>
+                <input class="search-bar form-control form-control" id="search" name="search" placeholder="Another search ?">
                 <div id="matchList"></div>
             </div>
         </form>
     </nav>
     <?php
+
     if (isset($_GET['search']))
     {
         $count = "";
@@ -65,6 +65,7 @@ if (isset($_GET['modele']))
         ]);
         header('location:result.php?search=' . $term);
     }
+
     ?>
 </header>
 
@@ -74,9 +75,19 @@ if (isset($_GET['modele']))
 
     $i = 0;
 
-    while ($i < $count){
+    while ($i < $count)
+    {
 
-        echo('<h1>' . $result[$i]['modele'] . '</h1><img src="' . $result[$i]['photo'] . '" class="img-thumbnail" alt="' . $result[$i]['modele'] . '">');
+        echo'<div class="container mt-3">
+                <div class="row">
+                    <div class="col-md-7 m-auto">
+                        <h1 class="text-center mt-2">' .$result[$i]['modele']. '</h1>
+                        <figure class="figure">
+                            <img class=" img-fluid figure-img" src="'.$result[$i]['photo']. '" alt="' . $result[$i]['modele'] . '">
+                        </figure>
+                    </div>
+                </div>
+            </div>';
 
         $i++;
     }

@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    color: black;
+}
+
+/* ----- Header ----- */
+
+.search-bar{
+    width: 120%;
+}
+
+#matchList{
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    padding-left: 0.1%;
+}
+
+/* ----- Main Content ----- */
+
+figure, .col, .row {
+    text-align: center;
+}
+
+figure{
+    height: 2rem;
+}
+
+img{
+    width: 100%;
+}
+
+/* ----- Footer ----- */
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 425px){
+
+}
+
+@media screen and (max-width: 425px){
+    .search{
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1365px){
+
+}
+
+@media screen and (min-width: 1365px) and (max-width: 1568px){
+
+}

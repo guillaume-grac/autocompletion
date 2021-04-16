@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body{
+    position: relative;
+    min-height: 100%;
+    color: black;
+}
+
+/* ----- Header ----- */
+
+.search-bar{
+    width: 120%;
+}
+
+#matchList{
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    padding-left: 0.1%;
+}
+
+/* ----- Main Content ----- */
+
+.content{
+    max-height: 100%;
+    align-items: center;
+}
+
+.card{
+    text-align: center;
+    align-items: center;
+    width: 33%;
+    border: none;
+}
+
+.card h1{
+    font-size: 18px;
+}
+
+img{
+    width: 10rem;
+}
+
+main a{
+    transition: 0.5s;
+}
+
+main a:hover{
+    text-decoration: none;
+    text-shadow: #1d2124 2px 2px 2px;
+}
+
+/* ----- Footer ----- */
+
+footer{
+    display: none;
+    padding-top: 3%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 425px){
+
+    .card{
+        width: 25%;
+    }
+
+    img{
+        width: 7rem;
+    }
+
+    .search{
+        width: 70%;
+    }
+
+    .card h1{
+        font-size: 0.4rem;
+    }
+
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1365px){
+
+}
+
+@media screen and (min-width: 1365px) and (max-width: 1568px){
+
+}

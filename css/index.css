@@ -22,6 +22,12 @@ body{
 
 /* ----- Header ----- */
 
+.mute{
+    background-color: white;
+    padding: 0.5%;
+    border-radius: 15px;
+}
+
 /* ----- Main Content ----- */
 
 .container{
@@ -29,12 +35,19 @@ body{
 }
 
 .search-bar{
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 main h1{
     color: white;
     text-shadow: black 3px 3px 3px;
+}
+
+#matchList{
+    margin-top: 0.2%;
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 1%;
 }
 
 /* ----- Footer -----*/
